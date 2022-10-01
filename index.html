@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+    <head>
+        <title>Simple Interest Calculator</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="assets/img/dp.png" rel="icon">
+        <script src="assets/js/script.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+        <link rel="stylesheet" href="assets/css/style.css">
+    </head>
+    <body>
+        <div class="maindiv">
+            <h1>Simple Interest Calculator</h1>
+
+            <div class="contents">
+                <table id="table">
+                    <tbody>
+                        <tr>
+                            <td class="labels">Amount </td>
+                            <td>
+                                <input type="number" id="principal">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="labels">Interest Rate </td>
+                            <td>
+                                <input type="range" min="0.00" max="100.00" step="0.25" value="10.25" id="rate" name="rate" onchange="SliderValue()"> 
+                                <span id="rate_display">10.25%</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="labels">No. of Years</td>
+                            <td>
+                                <input type="number" id="years">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+    
+    
+                <button id="compute" onclick="compute()">Calculate Interest</button> <br>
+                <span id="result">
+                </span>
+                <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+            </div>
+        </div>
+    </body>
+</html>
