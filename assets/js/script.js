@@ -15,12 +15,12 @@ function compute()
 
     var dateNow = new Date();
     var yearNow = parseInt(dateNow.getFullYear()) + parseInt(years);
-    
+    var fi = interest-principal
     var resultDisplay = document.getElementById("result");
     resultDisplay.innerHTML = "If you deposit " + "<span class='highlight'>" + principal + "</span>."  + ", <br> at an interest rate of "+ "<span class='highlight'>" + rate + "</span>%." + "<br> You will receive an amount of " + "<span class='highlight'>" + interest + "</span>" + ", <br> in the year " + "<span class='highlight'>" + yearNow + "</span>";
 
     var xValues = ["Actual Amount", "Interest"];
-                var yValues = [principal, interest];
+                var yValues = [principal, fi];
                 var barColors = [
                 "#000000",
                 "#4169e1",
